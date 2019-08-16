@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="2" virtualPath="/Views/Shared/_Layout.cshtml" hash="6028d26f" filehash="17534de1a354" flags="110000" assembly="App_Web_rmfhggks" type="ASP._Page_Views_Shared__Layout_cshtml">
+    <filedeps>
+        <filedep name="/Views/Shared/_Layout.cshtml" />
+    </filedeps>
+</preserve>

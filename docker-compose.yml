@@ -1,0 +1,20 @@
+version: '3'
+services:
+  mono:
+    build: ./mono
+    volumes:
+      - ./app:/home/monoapp
+      - xsp4socket:/var/run/xsp4
+  nginx:
+    image: nginx:alpine
+    ports:
+      - 80:80
+    depends_on:
+      - mono
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/fastcgi_params:/etc/nginx/fastcgi_params
+      - ./app:/home/monoapp
+      - xsp4socket:/var/run/xsp4
+volumes:
+  xsp4socket:
